@@ -4,7 +4,7 @@ import Image from "next/image";
 // import { Counter } from '../components/counter'
 import Link from 'next/link'
 // import Hello from '@components/hello'; // wtest ts
-// import { Auth } from '@components/auth/auth'
+import { Auth } from '@components/auth/auth'
 import './style.scss'
 
 // export const Home = () => { // wtest wrong?
@@ -24,8 +24,8 @@ const Home = () => {
                 <li><Link href="/about">About Me</Link></li>
                 <li><Link href="learning">Learning</Link></li>
                 
-            </div>
-            <Auth></Auth> */}
+            </div> */}
+            <Auth></Auth>
         </div>
         {/* <li><Link href="/blog/first-post">blog/first-post</Link></li> */}
         {/* <Greet />
