@@ -7,6 +7,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center mt-20">
+      <p>session: {session && JSON.stringify(session)}</p>
       {session ? (
         <>
           <p>Welcome 123, {session.user.name}!</p>
