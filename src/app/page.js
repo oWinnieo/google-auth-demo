@@ -10,7 +10,7 @@ export default function Home() {
       <p>session: {session && JSON.stringify(session)}</p>
       {session ? (
         <>
-          <p>Welcome 123, {session.user.name}!</p>
+          <p>Welcome 123 123, {session.user.name}!</p>
           <img src={session.user.image} alt="User Avatar" className="w-16 h-16 rounded-full mt-2" />
           <button onClick={() => signOut()} className="mt-4 bg-red-500 text-white px-4 py-2 rounded">
             Sign out
@@ -18,7 +18,7 @@ export default function Home() {
         </>
       ) : (
         <button onClick={() => signIn("google")} className="bg-blue-500 text-white px-4 py-2 rounded">
-          Sign in with Google
+          Sign in with Google 123 123
         </button>
       )}
     </div>
