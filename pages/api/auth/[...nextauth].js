@@ -15,16 +15,21 @@ export const authOptions = {
             access_type: "offline",
             response_type: "code"
         }
-    }
+      },
+      callbackUrl: process.env.NEXTAUTH_URL + "/api/auth/callback/google",
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET, // 用于加密 JWT
-  callbacks: {
-    async session({ session, token }) {
-      session.user.id = token.sub; // 让 session 里包含用户 ID
-      return session;
-    },
+  // callbacks: {
+  //   async session({ session, token }) {
+  //     session.user.id = token.sub; // 让 session 里包含用户 ID
+  //     return session;
+  //   },
+  // },
+  pages: {
+    signIn: '/signin'
   },
+  baseUrl: process.env.NEXTAUTH_URL, // optional wtest
 };
 
 export default NextAuth(authOptions);
