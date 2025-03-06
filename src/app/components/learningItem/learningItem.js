@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { timeFormatter } from '../../../../lib/util'
+// import { timeFormatter } from '../../../../lib/util'
 import { htmlDecode } from '@/lib/utils';
 /* wtest pw */
 import { useAlert } from '@/app/contexts/AlertContext' // wtest alert
@@ -52,35 +52,35 @@ const itemDelete = async ({ params, id }) => {
 export const LearningItem = ({ title, content, contentSliced, createdAt, collectionName, id, params }) => {
     const itemUrl = `/learning/${collectionName}/${id}`
     /* wtest pw */
-    const { showAlert } = useAlert() // wtest alert
-    const { openModal, closeModal } = useModal()
+    // const { showAlert } = useAlert() // wtest alert
+    // const { openModal, closeModal } = useModal()
     const checkDelStatus = () => {
-        openModal(
-            {
-                title: 'pw check',
-                content: 'Please enter password for editing.',
-                childEl: (closeModal) => (
-                    <ModalContent closeModal={closeModal} valueHandler={pwCheck} />
-                )
+        // openModal(
+        //     {
+        //         title: 'pw check',
+        //         content: 'Please enter password for editing.',
+        //         childEl: (closeModal) => (
+        //             <ModalContent closeModal={closeModal} valueHandler={pwCheck} />
+        //         )
                 
-            },
-        )
+        //     },
+        // )
     }
     /* pw check */
     const pwCheck = (val) => {
         if (val === 'xiaow233') { // wtest xiaow233
-            showAlert({
-                message: 'pw ok',
-                type: "success",
-            })
-            closeModal()
+            // showAlert({
+            //     message: 'pw ok',
+            //     type: "success",
+            // })
+            // closeModal()
             // ToggleAddItem()
             itemDelete({ params, id })
         } else {
-            showAlert({
-                message: 'pw wrong',
-                type: 'danger'
-            })
+            // showAlert({
+            //     message: 'pw wrong',
+            //     type: 'danger'
+            // })
         }
         let t1 = setTimeout(() => {
             clearTimeout(t1)
@@ -95,7 +95,7 @@ export const LearningItem = ({ title, content, contentSliced, createdAt, collect
             {/* <p>---</p> */}
             {/* <div dangerouslySetInnerHTML={{ __html: content }}></div> */}
             {/* <div>{htmlDecode(content, 'show')}</div> */}
-            <p>{timeFormatter(createdAt)}</p>
+            {/* <p>{timeFormatter(createdAt)}</p> */}
             {/* <p>wtest: id: {id}</p> */}
             <Link href={itemUrl}>More...</Link>
             <button

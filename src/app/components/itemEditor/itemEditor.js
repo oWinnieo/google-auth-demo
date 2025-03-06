@@ -10,24 +10,24 @@ import './itemEditor.scss';
 export const ItemEditor = ({ params, type }) => {
     // console.log('wtest ItemEditor params', params)
     const [ isAddItem, setIsAddItem ] = useState(false)
-    const { showAlert } = useAlert()
-    const { openModal, closeModal } = useModal()
+    // const { showAlert } = useAlert()
+    // const { openModal, closeModal } = useModal()
     const ToggleAddItem = () => {
         setIsAddItem((val) => !val)
     }
     /* modal */
     const checkAddStatus = () => {
         if (!isAddItem) {
-            openModal(
-                {
-                    title: 'pw check',
-                    content: 'Please enter password for editing.',
-                    childEl: (closeModal) => (
-                        <ModalContent closeModal={closeModal} valueHandler={pwCheck} />
-                    )
+            // openModal(
+            //     {
+            //         title: 'pw check',
+            //         content: 'Please enter password for editing.',
+            //         childEl: (closeModal) => (
+            //             <ModalContent closeModal={closeModal} valueHandler={pwCheck} />
+            //         )
                     
-                },
-            )
+            //     },
+            // )
         } else {
             ToggleAddItem()
         }
@@ -37,17 +37,17 @@ export const ItemEditor = ({ params, type }) => {
     /* pw check */
     const pwCheck = (val) => {
         if (val === 'xiaow233') { // wtest 
-            showAlert({
-                message: 'pw ok',
-                type: "success",
-            })
-            closeModal()
+            // showAlert({
+            //     message: 'pw ok',
+            //     type: "success",
+            // })
+            // closeModal()
             ToggleAddItem()
         } else {
-            showAlert({
-                message: 'pw wrong',
-                type: 'danger'
-            })
+            // showAlert({
+            //     message: 'pw wrong',
+            //     type: 'danger'
+            // })
         }
         let t1 = setTimeout(() => {
             clearTimeout(t1)
