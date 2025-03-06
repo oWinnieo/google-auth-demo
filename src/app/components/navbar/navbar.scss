@@ -1,0 +1,23 @@
+@use '@styles/base/reset.scss' as reset;
+@use '@styles/layouts/layout-main.scss' as layoutMain;
+.navbar {
+    @include layoutMain.bg-main-ff;
+    color: #fff;
+}
+.navbar-in {
+    @include layoutMain.layout-area-in;
+}
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@media (min-width: 769px) {
+    .navbar-in {
+        @include layoutMain.layout-area-in-gt-768;
+    }
+}
