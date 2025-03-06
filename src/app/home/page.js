@@ -17,6 +17,7 @@ const Home = () => {
             <div className="area-in">
                 <h2>Welcome to Winnie&apos;s World 1st Page</h2>
                 {/* <Hello name="TypeScript"></Hello> */}
+                <p>testing auth 1</p>
             </div>
         </div>
         <div className="area area-navigation">
