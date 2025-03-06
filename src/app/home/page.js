@@ -20,11 +20,11 @@ const Home = () => {
             </div>
         </div>
         <div className="area area-navigation">
-            {/* <div className="area-in">
+            <div className="area-in">
                 <li><Link href="/about">About Me</Link></li>
                 <li><Link href="learning">Learning</Link></li>
                 
-            </div> */}
+            </div>
             <Auth></Auth>
         </div>
         {/* <li><Link href="/blog/first-post">blog/first-post</Link></li> */}

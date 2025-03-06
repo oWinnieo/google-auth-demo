@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { Navbar } from "@components/navbar/navbar";
 import AuthProvider from "../app/components/SessionProvider"; // 引入刚刚创建的 SessionProvider
 import "./globals.css";
+import '@styles/base/base.scss';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,6 +25,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Navbar></Navbar>
         <AuthProvider>{children}</AuthProvider>
         
       </body>
